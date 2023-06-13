@@ -6,7 +6,7 @@ async function obtenerPartidos() {
 
   if (role == "ADMIN") {
     let token = localStorage.getItem("token");
-    let respuesta = await fetch('http://localhost:8081/partidos',
+    let respuesta = await fetch('https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos',
       {
         method: "GET",
         headers: {
@@ -679,7 +679,7 @@ function guardarPartido() {
 
   // Realizar la llamada a la API para agregar el partido
   const token = localStorage.getItem('token');
-  fetch('http://localhost:8081/partidos', {
+  fetch('https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
