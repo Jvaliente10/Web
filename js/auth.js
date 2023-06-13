@@ -5,8 +5,8 @@ document.querySelector("#loginUser").addEventListener("click", function (event) 
 
 async function login() {
   try {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username = document.getElementById("usernameUser").value;
+    let password = document.getElementById("passwordUser").value;
 
     let response = await fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/auth/login", {
       method: "POST",
