@@ -64,7 +64,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('http://localhost:8081/jugadores', {
+    let respuesta = await fetch('https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
@@ -155,7 +155,7 @@ async function obtenerJugadores() {
 
 //Función para obtener los datos del convocado según el nombre del jugador pulsado
 async function obtenerOtrosDatos(nombreJugador) {
-  let respuesta = await fetch(`http://localhost:8081/convocados/${nombreJugador}`);
+  let respuesta = await fetch(`https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/${nombreJugador}`);
   if (respuesta.ok) {
     let datos = await respuesta.json();
     if (datos) {
@@ -232,14 +232,6 @@ async function obtenerOtrosDatos(nombreJugador) {
         celdafaltas.innerHTML = convocado.faltas;
         celdaMinutos.innerHTML = convocado.minutos;
 
-        // // Crear los botones de editar y borrar
-        // let botonEditar = document.createElement("button");
-        // botonEditar.textContent = "Editar";
-        // botonEditar.classList.add("btn", "btn-sm", "btn-primary", "mr-1");
-        // botonEditar.addEventListener("click", () => {
-        //   mostrarFormularioEdicion(convocado.idPartido, convocado.nomJugador, convocado.idJugador);
-        // });
-
         // let botonBorrar = document.createElement("button");
         // botonBorrar.textContent = "Borrar";
         // botonBorrar.classList.add("btn", "btn-sm", "btn-danger");
@@ -302,7 +294,7 @@ async function obtenerOtrosDatos(nombreJugador) {
 async function eliminarJugador(id) {
 
   let token = localStorage.getItem("token");
-  let respuesta = await fetch(`http://localhost:8081/jugadores/${id}`, {
+  let respuesta = await fetch(`https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -327,7 +319,7 @@ function editarJugador(event) {
   contenedor.style.display = "none";
   let editarJugadoresDiv = document.querySelector("#editarJugadores");
   let token = localStorage.getItem("token");
-  fetch(`http://localhost:8081/jugadores/${jugadorId}`, {
+  fetch(`https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${jugadorId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -409,7 +401,7 @@ function guardarCambios(jugadorId) {
     dorsalJugador: dorsalInput,
     posicionJugador: posicionInput,
   };
-  fetch(`http://localhost:8081/jugadores/${jugadorId}`, {
+  fetch(`https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${jugadorId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -505,7 +497,7 @@ function guardarJugador() {
 
   // Realizar la llamada POST al endpoint /jugadores con el objeto jugador en formato JSON
   let token = localStorage.getItem("token");
-  fetch("http://localhost:8081/jugadores", {
+  fetch("https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -548,144 +540,7 @@ function guardarJugador() {
 //     alert("Error al eliminar el jugador: " + error);
 //   }
 // }
-// function mostrarFormularioEdicion(idPartido, nombreJugador, idJugador) {
-//   // Obtener los elementos por su ID
-//   let convocadosTable = document.getElementById("tablaConvocados");
-//   let addForm = document.getElementById("addForm");
 
-//   // Ocultar la tabla de convocados
-//   convocadosTable.style.display = "none";
-
-//   // Mostrar el formulario de edición
-//   addForm.style.display = "block";
-
-//   // Crear el formulario de edición
-//   let formulario = document.createElement("form");
-//   formulario.setAttribute("id", "formularioEdicion");
-//   formulario.classList.add("needs-validation");
-
-//   // Campo: Puntos
-//   let puntosInput = document.createElement("input");
-//   puntosInput.setAttribute("type", "number");
-//   puntosInput.setAttribute("placeholder", "Puntos");
-//   puntosInput.setAttribute("id", "puntosInput");
-//   puntosInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(puntosInput);
-
-//   // Campo: Asistencias
-//   let asistenciasInput = document.createElement("input");
-//   asistenciasInput.setAttribute("type", "number");
-//   asistenciasInput.setAttribute("placeholder", "Asistencias");
-//   asistenciasInput.setAttribute("id", "asistenciasInput");
-//   asistenciasInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(asistenciasInput);
-
-//   // Campo: Rebotes
-//   let rebotesInput = document.createElement("input");
-//   rebotesInput.setAttribute("type", "number");
-//   rebotesInput.setAttribute("placeholder", "Rebotes");
-//   rebotesInput.setAttribute("id", "rebotesInput");
-//   rebotesInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(rebotesInput);
-
-//   // Campo: Robos
-//   let robosInput = document.createElement("input");
-//   robosInput.setAttribute("type", "number");
-//   robosInput.setAttribute("placeholder", "Robos");
-//   robosInput.setAttribute("id", "robosInput");
-//   robosInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(robosInput);
-
-//   // Campo: Bloqueos
-//   let bloqueosInput = document.createElement("input");
-//   bloqueosInput.setAttribute("type", "number");
-//   bloqueosInput.setAttribute("placeholder", "Bloqueos");
-//   bloqueosInput.setAttribute("id", "bloqueosInput");
-//   bloqueosInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(bloqueosInput);
-
-//   // Campo: Faltas
-//   let faltasInput = document.createElement("input");
-//   faltasInput.setAttribute("type", "number");
-//   faltasInput.setAttribute("placeholder", "Faltas");
-//   faltasInput.setAttribute("id", "faltasInput");
-//   faltasInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(faltasInput);
-
-//   // Campo: Minutos
-//   let minutosInput = document.createElement("input");
-//   minutosInput.setAttribute("type", "number");
-//   minutosInput.setAttribute("placeholder", "Minutos");
-//   minutosInput.setAttribute("id", "minutosInput");
-//   minutosInput.classList.add("form-control", "mb-3");
-//   formulario.appendChild(minutosInput);
-
-//   // Agregar el formulario al contenedor del formulario de edición
-//   addForm.appendChild(formulario);
-
-//   // Crear el botón de guardar cambios
-//   let guardarCambiosButton = document.createElement("button");
-//   guardarCambiosButton.textContent = "Guardar Cambios";
-//   guardarCambiosButton.classList.add("btn", "btn-primary", "mb-3");
-//   guardarCambiosButton.addEventListener("click", function () {
-
-
-//     // Llamar a la función para actualizar el convocado
-//     actualizarConvocado(idPartido, nombreJugador, idJugador);
-
-//     // Mostrar la tabla de convocados y ocultar el formulario de edición
-//     convocadosTable.style.display = "block";
-//     addForm.style.display = "none";
-//   });
-
-//   // Agregar el botón de guardar cambios al formulario
-//   formulario.appendChild(guardarCambiosButton);
-// }
-
-
-// function actualizarConvocado(idPartido, nombreJugador, idJugador) {
-//   let puntos = document.getElementById("puntosInput").value;
-//   let asistencias = document.getElementById("asistenciasInput").value;
-//   let rebotes = document.getElementById("rebotesInput").value;
-//   let robos = document.getElementById("robosInput").value;
-//   let bloqueos = document.getElementById("bloqueosInput").value;
-//   let faltas = document.getElementById("faltasInput").value;
-//   let minutos = document.getElementById("minutosInput").value;
-
-//   // Crear un objeto con los datos del convocado
-//   let convocado = {
-//     idPartido: idPartido,
-//     nombreJugador: nombreJugador,
-//     idJugador: idJugador,
-//     puntos: puntos,
-//     asistencias: asistencias,
-//     rebotes: rebotes,
-//     robos: robos,
-//     bloqueos: bloqueos,
-//     faltas: faltas,
-//     minutos: minutos
-//   };
-//   let token = localStorage.getItem("token");
-//   // Realizar la llamada a la API con el método PUT
-//   fetch(`http://localhost:8081/convocados/${idPartido}/${nombreJugador}/${idJugador}`, {
-//     method: "PUT",
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(convocado),
-//   })
-//     .then(response => response.json())
-//     .then(updatedConvocado => {
-//       // Manejar la respuesta de la API
-//       console.log("Convocado actualizado:", updatedConvocado);
-//       // Aquí puedes realizar las acciones necesarias después de actualizar el convocado
-//     })
-//     .catch(error => {
-//       // Manejar errores en la llamada a la API
-//       console.error("Error al actualizar el convocado:", error);
-//     });
-// }
 function addConvocado() {
   // Obtener los elementos por su ID
   let convocadosTable = document.getElementById("tablaConvocados");
@@ -834,7 +689,7 @@ function guardarConvocado() {
   };
   let token = localStorage.getItem("token");
   // Realizar la llamada a la API con el método PÔST
-  fetch(`http://localhost:8081/convocados/add`, {
+  fetch(`https://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/add`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
