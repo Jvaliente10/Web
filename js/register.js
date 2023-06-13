@@ -6,8 +6,8 @@ document.querySelector("#register").addEventListener("submit", function (event) 
   
   async function register() {
     try {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+      const username = document.getElementById("usernameUser").value;
+      const password = document.getElementById("passwordUser").value;
   
       const response = await fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/auth/register", {
         method: "POST",

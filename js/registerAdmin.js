@@ -6,8 +6,8 @@ document.querySelector("#registerAdmin").addEventListener("submit", function (ev
   
   async function registerAdmin() {
     try {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+      const username = document.getElementById("usernameAdmin").value;
+      const password = document.getElementById("passwordAdmin").value;
   
       const response = await fetch("http://localhost:8081/auth/register/admin", {
         method: "POST",
