@@ -9,7 +9,7 @@ document.querySelector("#register").addEventListener("submit", function (event) 
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
   
-      const response = await fetch("http://localhost:8081/auth/register", {
+      const response = await fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

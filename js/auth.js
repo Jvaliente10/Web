@@ -8,7 +8,7 @@ async function login() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    let response = await fetch("http://localhost:8081/auth/login", {
+    let response = await fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

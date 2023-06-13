@@ -9,7 +9,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('http://localhost:8081/jugadores', {
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
