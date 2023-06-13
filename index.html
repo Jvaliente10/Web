@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Estilos propios-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    <title>Club Deportivo Bollullos</title>
+</head>
+
+<body class="custom-body">
+    <div class="background-image"></div>
+    <div class="container text-center bg-light rounded my-5">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar navbar-expand-lg mt-3 mb-3">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img src="images/logo1.png" alt="Logo" class="img-fluid" style="max-width: 75px;">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#">El club</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="jugadores.html">Nuestros Jugadores</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="partidos.html">Calendario de partidos</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="clasificacion.html">Clasificación</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Fin del Navbar -->
+
+        <!-- Contenido principal -->
+        <div id="pincipalInicio">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="bg-light p-3 mb-3">
+                        <h3>Bienvenido a nuestra Web</h3>
+                        <div id="imagen1">
+                            <img src="images/banner.jpg" alt="Parte del equipo posando con las nuevas equipaciones">
+                        </div>
+                        <p class="text-start">Bienvenidos a la web del equipo de baloncesto de Bollullos de la Mitación.
+                            En esta web,
+                            podrás encontrar información sobre el club, solo la plantilla de jugadores, el calendario de
+                            partidos y la clasificación en la liga entre otras cosas.</p>
+                    </div>
+                    <div class="bg-light p-3 mb-3">
+                        <h3>Galería de fotos</h3>
+                        <div id="imgCarousel" class="carousel slide" data-bs-ride="true">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/img1.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img2.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img3.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img4.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img5.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img6.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img7.JPG" class="d-block w-100" alt="...">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/img8.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img9.JPG" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/img10.JPG" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Mejores actuaciones en un partido</h4>
+
+                    <div id="mejoresEstadisticas" class="p-3 mb-3 d-flex flex-column">
+                        <div class="text-center flex-fill">
+                          <h5>Puntos</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasPuntos"></table>
+                          </div>
+                        </div>
+                        <div class="text-center flex-fill">
+                          <h5 class="mt-2">Asistencias</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasAsistencias"></table>
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <h5 class="mt-2">Rebotes</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasRebotes"></table>
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <h5 class="mt-2">Bloqueos</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasBloqueos"></table>
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <h5 class="mt-2">Robos</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasRobos"></table>
+                          </div>
+                        </div>
+                        <div class="flex-fill">
+                          <h5 class="mt-2">Minutos</h5>
+                          <div class="table-responsive flex-fill">
+                            <table class="table table-primary h-100 w-100" id="tablaMasMinutos"></table>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+                    <div class="bg-light p-3 mb-3">
+                        <h3>División 4</h3>
+                        <p>Contenido de la división 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Librerías JS necesarias para Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="js/convocado.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Estilos propios-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css" />
+    <title>Calendario | Club Deportivo Bollullos</title>
+</head>
+
+<body class="custom-body">
+    <div class="background-image"></div>
+    <div class="container text-center bg-light rounded my-5">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar navbar-expand-lg mt-3 mb-3">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <img src="images/logo1.png" alt="Logo" class="img-fluid" style="max-width: 75px;">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="#">El club</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="jugadores.html">Nuestros Jugadores</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="partidos.html">Calendario de partidos</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="clasificacion.html">Clasificación</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Fin del Navbar -->
+
+        <!-- Contenido principal -->
+        <div id="principalPartidos">
+            <div id="tablaPartidosDiv">
+                <table class="table table-primary p-2" id="tablaPartidos"></table>
+            </div>
+            
+            <div id="tablaConvocadosDiv">
+                <table class="table table-primary p-2" id="tablaConvocados"></table>
+            </div>
+        </div>
+
+        <div id="editarPartidos"></div>
+        <div id="addPartidos"></div>
+    </div>
+
+    <!-- Librerías JS necesarias para Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+        <script src="js/partidos.js"></script>
+</body>
+
+</html>
