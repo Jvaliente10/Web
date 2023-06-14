@@ -9,7 +9,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('https://192.168.1.122:8081/jugadores', {
+    let respuesta = await fetch('http://192.168.1.122:8081/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
@@ -64,7 +64,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('https://192.168.1.122:8081/jugadores', {
+    let respuesta = await fetch('http://192.168.1.122:8081/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
@@ -155,7 +155,7 @@ async function obtenerJugadores() {
 
 //Función para obtener los datos del convocado según el nombre del jugador pulsado
 async function obtenerOtrosDatos(nombreJugador) {
-  let respuesta = await fetch(`https://192.168.1.122:8081/convocados/${nombreJugador}`);
+  let respuesta = await fetch(`http://192.168.1.122:8081/convocados/${nombreJugador}`);
   if (respuesta.ok) {
     let datos = await respuesta.json();
     if (datos) {
@@ -294,7 +294,7 @@ async function obtenerOtrosDatos(nombreJugador) {
 async function eliminarJugador(id) {
 
   let token = localStorage.getItem("token");
-  let respuesta = await fetch(`https://192.168.1.122:8081/jugadores/${id}`, {
+  let respuesta = await fetch(`http://192.168.1.122:8081/jugadores/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -319,7 +319,7 @@ function editarJugador(event) {
   contenedor.style.display = "none";
   let editarJugadoresDiv = document.querySelector("#editarJugadores");
   let token = localStorage.getItem("token");
-  fetch(`https://192.168.1.122:8081/jugadores/${jugadorId}`, {
+  fetch(`http://192.168.1.122:8081/jugadores/${jugadorId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -401,7 +401,7 @@ function guardarCambios(jugadorId) {
     dorsalJugador: dorsalInput,
     posicionJugador: posicionInput,
   };
-  fetch(`https://192.168.1.122:8081/jugadores/${jugadorId}`, {
+  fetch(`http://192.168.1.122:8081/jugadores/${jugadorId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -497,7 +497,7 @@ function guardarJugador() {
 
   // Realizar la llamada POST al endpoint /jugadores con el objeto jugador en formato JSON
   let token = localStorage.getItem("token");
-  fetch("https://192.168.1.122:8081/jugadores", {
+  fetch("http://192.168.1.122:8081/jugadores", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,

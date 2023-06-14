@@ -8,7 +8,7 @@ async function login() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
-    let response = await fetch("https://192.168.1.122:8081/auth/login", {
+    let response = await fetch("http://192.168.1.122:8081/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
