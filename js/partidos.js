@@ -6,7 +6,7 @@ async function obtenerPartidos() {
 
   if (role == "ADMIN") {
     let token = localStorage.getItem("token");
-    let respuesta = await fetch('http://192.168.1.122:8081/partidos',
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos',
       {
         method: "GET",
         headers: {
@@ -131,7 +131,7 @@ async function obtenerPartidos() {
     }
   } else {
     let token = localStorage.getItem("token");
-    let respuesta = await fetch('http://192.168.1.122:8081/partidos',
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos',
       {
         method: "GET",
         headers: {
@@ -218,7 +218,7 @@ async function obtenerPartidos() {
 async function obtenerOtrosDatos(idPartido) {
   try {
     let token = localStorage.getItem("token");
-    let respuesta = await fetch(`http://192.168.1.122:8081/convocados/partido/${idPartido}`, {
+    let respuesta = await fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/partido/${idPartido}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -331,7 +331,7 @@ async function obtenerOtrosDatos(idPartido) {
 async function eliminarPartido(id) {
 
   let token = localStorage.getItem("token");
-  let respuesta = await fetch(`http://192.168.1.122:8081/partidos/${id}`, {
+  let respuesta = await fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -360,7 +360,7 @@ function crearFormularioEdicionPartido(idPartido) {
 
   // Realizar la llamada al backend para obtener los datos del partido
   let token = localStorage.getItem("token");
-  let url = `http://192.168.1.122:8081/partidos/${idPartido}`;
+  let url = `http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos/${idPartido}`;
 
   fetch(url, {
     headers: {
@@ -514,7 +514,7 @@ function guardarCambiosPartido(idPartido) {
   };
 
   let token = localStorage.getItem("token");
-  let url = `http://192.168.1.122:8081/partidos/${idPartido}`;
+  let url = `http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos/${idPartido}`;
 
   fetch(url, {
     method: "PUT",
@@ -679,7 +679,7 @@ function guardarPartido() {
 
   // Realizar la llamada a la API para agregar el partido
   const token = localStorage.getItem('token');
-  fetch('http://192.168.1.122:8081/partidos', {
+  fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/partidos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

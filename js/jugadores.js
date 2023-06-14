@@ -9,7 +9,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('http://192.168.1.122:8081/jugadores', {
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
@@ -64,7 +64,7 @@ async function obtenerJugadores() {
 
     const token = localStorage.getItem("token");
 
-    let respuesta = await fetch('http://192.168.1.122:8081/jugadores', {
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores', {
       headers: {
         "Authorization": `Bearer ${token}`,
       },
@@ -155,7 +155,7 @@ async function obtenerJugadores() {
 
 //Función para obtener los datos del convocado según el nombre del jugador pulsado
 async function obtenerOtrosDatos(nombreJugador) {
-  let respuesta = await fetch(`http://192.168.1.122:8081/convocados/${nombreJugador}`);
+  let respuesta = await fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/${nombreJugador}`);
   if (respuesta.ok) {
     let datos = await respuesta.json();
     if (datos) {
@@ -294,7 +294,7 @@ async function obtenerOtrosDatos(nombreJugador) {
 async function eliminarJugador(id) {
 
   let token = localStorage.getItem("token");
-  let respuesta = await fetch(`http://192.168.1.122:8081/jugadores/${id}`, {
+  let respuesta = await fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -319,7 +319,7 @@ function editarJugador(event) {
   contenedor.style.display = "none";
   let editarJugadoresDiv = document.querySelector("#editarJugadores");
   let token = localStorage.getItem("token");
-  fetch(`http://192.168.1.122:8081/jugadores/${jugadorId}`, {
+  fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${jugadorId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', obtenerRobos);
 document.addEventListener('DOMContentLoaded', obtenerMinutos);
 
 async function obtenerPuntos() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/puntos');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/puntos');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {
@@ -60,7 +60,7 @@ async function obtenerPuntos() {
 }
 
 async function obtenerAsistencias() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/asistencias');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/asistencias');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {
@@ -114,7 +114,7 @@ async function obtenerAsistencias() {
 }
 
 async function obtenerRebotes() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/rebotes');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/rebotes');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {
@@ -168,7 +168,7 @@ async function obtenerRebotes() {
 }
 
 async function obtenerBloqueos() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/bloqueos');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/bloqueos');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {
@@ -222,7 +222,7 @@ async function obtenerBloqueos() {
 }
 
 async function obtenerRobos() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/robos');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/robos');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {
@@ -276,7 +276,7 @@ async function obtenerRobos() {
 }
 
 async function obtenerMinutos() {
-    let respuesta = await fetch('http://192.168.1.122:8081/convocados/minutos');
+    let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/minutos');
     if (respuesta.ok) {
         let datos = await respuesta.json();
         if (datos) {

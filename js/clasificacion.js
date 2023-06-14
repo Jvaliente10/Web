@@ -4,7 +4,7 @@ async function obtenerClasificacion() {
     const role = localStorage.getItem("user");
     if (role == "ADMIN") {
         let token = localStorage.getItem("token");
-        let respuesta = await fetch('http://192.168.1.122:8081/equipos/puntos',
+        let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos/puntos',
             {
                 method: "GET",
                 headers: {
@@ -113,7 +113,7 @@ async function obtenerClasificacion() {
 
     }
     else {
-        let respuesta = await fetch('http://192.168.1.122:8081/equipos/puntos');
+        let respuesta = await fetch('http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos/puntos');
         if (respuesta.ok) {
             let datos = await respuesta.json();
             if (datos.length > 0) {
@@ -176,7 +176,7 @@ async function obtenerClasificacion() {
 async function eliminarEquipo(id) {
 
     let token = localStorage.getItem("token");
-    let respuesta = await fetch(`http://192.168.1.122:8081/equipos/${id}`, {
+    let respuesta = await fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos/${id}`, {
         method: "DELETE",
         headers: {
             Authorization: `Bearer ${token}`,
@@ -205,7 +205,7 @@ function crearFormularioEdicionEquipo(idEquipo) {
 
     // Realizar la llamada al backend para obtener los datos del partido
     let token = localStorage.getItem("token");
-    let url = `http://192.168.1.122:8081/equipos/${idEquipo}`;
+    let url = `http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos/${idEquipo}`;
 
     fetch(url, {
         headers: {
@@ -309,7 +309,7 @@ function guardarCambiosEquipo(idEquipo) {
     };
 
     let token = localStorage.getItem("token");
-    let url = `http://192.168.1.122:8081/equipos/${idEquipo}`;
+    let url = `http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos/${idEquipo}`;
 
     fetch(url, {
         method: "PUT",
@@ -426,7 +426,7 @@ function guardarEquipo(){
     };
 
     let token = localStorage.getItem("token");
-    let url = `http://192.168.1.122:8081/equipos`;
+    let url = `http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/equipos`;
 
     fetch(url, {
         method: "Post",

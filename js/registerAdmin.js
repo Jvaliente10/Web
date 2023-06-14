@@ -9,7 +9,7 @@ document.querySelector("#registerAdmin").addEventListener("submit", function (ev
       const username = document.getElementById("usernameAdmin").value;
       const password = document.getElementById("passwordAdmin").value;
   
-      const response = await fetch("http://192.168.1.122:8081/auth/register/admin", {
+      const response = await fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/auth/register/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
