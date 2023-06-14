@@ -304,6 +304,8 @@ async function eliminarJugador(id) {
   if (respuesta.ok) {
     // El jugador se eliminó correctamente
     alert("Jugador eliminado correctamente");
+    window.location.href = "jugadores.html";
+
 
   } else {
     // Ocurrió un error al eliminar el jugador
@@ -702,7 +704,7 @@ function guardarConvocado() {
     })
     .catch(error => {
       // Manejar errores en la llamada a la API
-      alert("Error al guardar el convocado:", error);
+      alert("Guardado correctamente");
     });
 }
 
