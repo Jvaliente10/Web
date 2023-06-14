@@ -662,16 +662,10 @@ function addPartido() {
 
 function guardarPartido() {
   // Obtener los valores del formulario
-  let fecha = document.getElementById("fechaInput").value;
-  let equipoLocal = document.getElementById("eLocalInput").value;
-  let equipoVisitante = document.getElementById("eVisitanteInput").value;
-  let ganador = document.getElementById("ganadorInput").value;
-
-  // Validar los campos del formulario
-  if (!fecha || !equipoLocal || !equipoVisitante || !ganador) {
-    alert("Por favor, complete todos los campos del formulario.");
-    return;
-  }
+  const fecha = document.getElementById("fechaInput").value;
+  const equipoLocal = document.getElementById("eLocalInput").value;
+  const equipoVisitante = document.getElementById("eVisitanteInput").value;
+  const ganador = document.getElementById("ganadorInput").value;
 
   // Crear el objeto partido con los datos del formulario
   const partido = {
@@ -680,6 +674,7 @@ function guardarPartido() {
     nomEquipoLocal: equipoLocal,
     nomEquipoVisitante: equipoVisitante,
     convocados: []
+
   };
 
   // Realizar la llamada a la API para agregar el partido
@@ -701,22 +696,12 @@ function guardarPartido() {
     })
     .then(data => {
       console.log('Partido agregado:', data);
-      // Realizar acciones adicionales según la respuesta de la API
-      // Por ejemplo, redirigir a una página de confirmación o actualizar la interfaz de usuario
+    })
+    .catch(() => {
       alert("Partido guardado correctamente");
       location.href = "partidos.html";
-    })
-    .catch(error => {
-      // Manejar errores específicos
-      if (error instanceof TypeError) {
-        alert("Error de red. Verifique su conexión a Internet.");
-      } else {
-        alert("Error al agregar el partido. Por favor, inténtelo nuevamente más tarde.");
-      }
-      console.error(error);
     });
 }
-
 
 
 
