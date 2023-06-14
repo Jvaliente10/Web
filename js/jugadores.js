@@ -34,7 +34,7 @@ async function obtenerJugadores() {
           // Crear el contenido de la tarjeta
           let contenidoTarjeta = `
               <div class="card">
-                  <img src="images/logo1.png" class="card-img-top" alt="Imagen del jugador">
+                  <img src="images/iconojugador.png" class="card-img-top" alt="Imagen del jugador">
                   <div class="card-body">
                       <h5 class="card-title">${jugador.nomJugador}</h5>
                       <p class="card-text">Dorsal: ${jugador.dorsalJugador}</p>
@@ -89,7 +89,7 @@ async function obtenerJugadores() {
           // Crear el contenido de la tarjeta
           let contenidoTarjeta = `
               <div class="card">
-                  <img src="images/logo1.png" class="card-img-top" alt="Imagen del jugador">
+                  <img src="images/iconojugador.png" class="card-img-top" alt="Imagen del jugador">
                   <div class="card-body">
                       <h5 class="card-title">${jugador.nomJugador}</h5>
                       <p class="card-text">Dorsal: ${jugador.dorsalJugador}</p>

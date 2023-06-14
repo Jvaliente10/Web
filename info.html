@@ -32,7 +32,7 @@
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item ms-3">
-                            <a class="nav-link" href="#">El club</a>
+                            <a class="nav-link" href="info.html">El club</a>
                         </li>
                         <li class="nav-item ms-3">
                             <a class="nav-link" href="jugadores.html">Nuestros Jugadores</a>
@@ -52,126 +52,62 @@
         </nav>
         <!-- Fin del Navbar -->
 
-        <!-- Contenido principal -->
-        <div id="pincipalInicio">
+        <div class="container text-start">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="bg-light p-3 mb-3">
-                        <h3>Bienvenido a nuestra Web</h3>
-                        <div id="imagen1">
-                            <img src="images/banner.jpg" alt="Parte del equipo posando con las nuevas equipaciones">
-                        </div>
-                        <p class="text-start">Bienvenidos a la web del equipo de baloncesto de Bollullos de la Mitación.
-                            En esta web,
-                            podrás encontrar información sobre el club, solo la plantilla de jugadores, el calendario de
-                            partidos y la clasificación en la liga entre otras cosas.</p>
-                    </div>
-                    <div class="bg-light p-3 mb-3">
-                        <h3>Galería de fotos</h3>
-                        <div id="imgCarousel" class="carousel slide" data-bs-ride="true">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/img1.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img2.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img3.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img4.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img5.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img6.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img7.JPG" class="d-block w-100" alt="...">
-                                </div>
+                <div class="col-auto">
+                    <h3>El Equipo</h3>
+                    <p>Aunque el club tiene un gran historial, el equipo tal y como lo conocemos
+                        actualmente, nació en 2019
+                        después de que varios que ya habíamos
+                        jugado antes en categorías inferiores o antiguos jugadores y otros también nuevos nos unieramos
+                        para
+                        la liga de ese año.
+                        Sin embargo, debido a la pandemia, ha sido este año cuando hemos vuelto a formar el equipo
+                        actual.
+                    </p>
+                    <p class="text-start">
+                        A pesar de que los resultados podrían haber sido mejores, ha sido una buena vuelta a la
+                        competición
+                        en la que muchos jugadores han llegado en muy buenas condiciones incluso, mejor de lo que
+                        estaban
+                        años atrás.
+                        Solo nos queda la temporada que viene volver con más ganas y darlo todo para obtener buenos
+                        resultados.
+                    </p>
 
-                                <div class="carousel-item">
-                                    <img src="images/img8.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img9.JPG" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/img10.JPG" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#imgCarousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#imgCarousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h4>Mejores actuaciones en un partido</h4>
+                <div class="col-auto text-start mt-4">
+                    <h3><a
+                            href="https://bollullosdelamitacion.org/delegaciones-bollullos/delegacion-de-deportes/instalaciones">Nuestras
+                            instalaciones</a></h3>
+                    <p>
+                        Nuestro equipo entrena en el polideportivo municipal desde siempre, a veces cuando hay previsión
+                        de lluvia, alquilamos algún pabellón cercano para poder entrenar.
+                    </p>
+                    <p>
+                        A la salidal del pueblo, encontramos el pabellón municipal que lleva en construcción bastante
+                        tiempo y el cual se retomó hace un año más o menos encontrandose actualmente en un estado
+                        avanzado
+                        y con el que esperamos contar para la próxima temporada facilitandonos los entrenamientos en
+                        esos días de frío o esos días de calor asfixiante.
 
-                    <div id="mejoresEstadisticas" class="p-3 mb-3 d-flex flex-column">
-                        <div class="text-center flex-fill">
-                          <h5>Puntos</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasPuntos"></table>
-                          </div>
-                        </div>
-                        <div class="text-center flex-fill">
-                          <h5 class="mt-2">Asistencias</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasAsistencias"></table>
-                          </div>
-                        </div>
-                        <div class="flex-fill">
-                          <h5 class="mt-2">Rebotes</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasRebotes"></table>
-                          </div>
-                        </div>
-                        <div class="flex-fill">
-                          <h5 class="mt-2">Bloqueos</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasBloqueos"></table>
-                          </div>
-                        </div>
-                        <div class="flex-fill">
-                          <h5 class="mt-2">Robos</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasRobos"></table>
-                          </div>
-                        </div>
-                        <div class="flex-fill">
-                          <h5 class="mt-2">Minutos</h5>
-                          <div class="table-responsive flex-fill">
-                            <table class="table table-primary h-100 w-100" id="tablaMasMinutos"></table>
-                          </div>
-                        </div>
-                      </div>
-                      
-
-                    <div class="bg-light p-3 mb-3">
-                        <h3>División 4</h3>
-                        <p>Contenido de la división 4</p>
-                    </div>
+                    </p>
+                    <p>
+                        A continuación os dejo un <a
+                            href="https://laguiadelaljarafe.com/deportes/el-nuevo-edificio-deportivo-de-bollullos-de-la-mitacion-contara-con-una-segunda-fase-que-albergara-un-piscina-municipal-cubierta/">
+                            enlace</a>
+                        a la noticia del mismo.
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Librerías JS necesarias para Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="js/convocado.js"></script>
+        </div>
+
+
+        <!-- Librerías JS necesarias para Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
