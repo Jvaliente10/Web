@@ -401,7 +401,7 @@ function guardarCambios(jugadorId) {
     dorsalJugador: dorsalInput,
     posicionJugador: posicionInput,
   };
-  fetch(`http://192.168.1.122:8081/jugadores/${jugadorId}`, {
+  fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores/${jugadorId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -497,7 +497,7 @@ function guardarJugador() {
 
   // Realizar la llamada POST al endpoint /jugadores con el objeto jugador en formato JSON
   let token = localStorage.getItem("token");
-  fetch("http://192.168.1.122:8081/jugadores", {
+  fetch("http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/jugadores", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -689,7 +689,7 @@ function guardarConvocado() {
   };
   let token = localStorage.getItem("token");
   // Realizar la llamada a la API con el método PÔST
-  fetch(`https://192.168.1.122:8081/convocados/add`, {
+  fetch(`http://clubbaloncestobollullos.eu-west-1.elasticbeanstalk.com/convocados/add`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
