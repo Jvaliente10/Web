@@ -342,7 +342,7 @@ async function eliminarPartido(id) {
     // El partido se eliminó correctamente
     alert("Partido eliminado correctamente");
     location.href = "partidos.html";
-    // Realizar las acciones necesarias (por ejemplo, eliminar el elemento del DOM)
+
   } else {
     // Ocurrió un error al eliminar el partido
     alert("Error al eliminar el Partido:", respuesta.status);
@@ -696,7 +696,6 @@ function guardarPartido() {
     })
     .then(data => {
       console.log('Partido agregado:', data);
-      // Realizar las acciones adicionales necesarias después de agregar el partido
     })
     .catch(() => {
       alert("Partido guardado correctamente");

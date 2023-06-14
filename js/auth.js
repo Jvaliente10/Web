@@ -30,7 +30,6 @@ async function login() {
       console.log("Error en la solicitud:", response.status);
     }
   } catch (error) {
-    // Manejar errores de red u otros errores aquí
     console.error("Ha ocurrido un error en la solicitud:", error);
   }
 }

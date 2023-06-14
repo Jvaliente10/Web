@@ -304,7 +304,7 @@ async function eliminarJugador(id) {
   if (respuesta.ok) {
     // El jugador se eliminó correctamente
     alert("Jugador eliminado correctamente");
-    // Realizar las acciones necesarias (por ejemplo, eliminar el elemento del DOM)
+
   } else {
     // Ocurrió un error al eliminar el jugador
     alert("Error al eliminar el jugador:", respuesta.status);
@@ -425,8 +425,6 @@ function guardarCambios(jugadorId) {
 
 //Función para abrir la interfaz de añadir jugador
 function addJugador() {
-
-  // Agregar el evento de clic al botón "Añadir"
 
   // Ocultar las tarjetas
   let contenedor = document.querySelector("#tarjetasJugadores");
@@ -701,7 +699,6 @@ function guardarConvocado() {
     .then(updatedConvocado => {
       // Manejar la respuesta de la API
       alert("Convocado guardado:", updatedConvocado);
-      // Aquí puedes realizar las acciones necesarias después de actualizar el convocado
     })
     .catch(error => {
       // Manejar errores en la llamada a la API

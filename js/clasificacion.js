@@ -187,7 +187,7 @@ async function eliminarEquipo(id) {
         // El partido se eliminó correctamente
         alert("Equipo eliminado correctamente");
         location.href = "clasificacion.html";
-        // Realizar las acciones necesarias (por ejemplo, eliminar el elemento del DOM)
+       
     } else {
         // Ocurrió un error al eliminar el partido
         alert("Error al eliminar el Equipo:", respuesta.status);

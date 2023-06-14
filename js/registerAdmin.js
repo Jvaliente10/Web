@@ -21,9 +21,9 @@ document.querySelector("#registerAdmin").addEventListener("submit", function (ev
         // Redireccionar al archivo "login.html" después del registro exitoso
         window.location.href = "login.html";
       } else {
-        console.log("Error en la solicitud:", response.status);
+        alert("No tienes los permisos necesarios");
       }
     } catch (error) {
-      console.error("Ha ocurrido un error en la solicitud:", error);
+      alert("Ha ocurrido un error en la solicitud:", error);
     }
   }
